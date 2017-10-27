@@ -1,0 +1,110 @@
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+{% load static %}
+
+<script src="{% static 'contentsummary/scripts/jquery-3.2.1.min.js' %}"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>ITC Summary Example</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'contentsummary/contentsummary.css' %}" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-8 sessiontitle">HYPE VERSUS IMPACT</div>
+        <div class="col-md-4 pillar proofpillar">Proof Pillar</div>
+    </div>
+    <div class="row highsummary">
+      <h2>
+      The insurance industry of the future will look significantly different in how capital and risk are connected; insurers will need to adapt their operating models to retool for this era
+    </h2>
+    </div>
+    <div class="row speakers">
+      <div class="col-xs-5 col-md-2 speaker">
+        <div class="row speakerpic"><img class="img-circle img-responsive" src="{% static 'contentsummary/images/Eric Boyum.png' %}"> </div>
+        <div class="row speakername">S. Eric Boyum <br />Managing Director @ Aon Risk Solutions</div>
+      </div>
+      <div class="col-xs-5 col-md-2 speaker">
+        <div class="row speakerpic"><img class="img-circle img-responsive" src="{% static 'contentsummary/images/Louis Carbonnier.png' %}"> </div>
+        <div class="row speakername">Louis Carbonnier <br />Global Head @ Euler Hermes Digital Agency</div>
+      </div>
+      <div class="col-xs-5 col-md-2 speaker">
+        <div class="row speakerpic"><img class="img-circle img-responsive" src="{% static 'contentsummary/images/Matthew Churchill.png' %}"> </div>
+        <div class="row speakername">Matthew Churchill <br />Head of futures @ Hiscox</div>
+      </div>
+      <div class="col-xs-5 col-md-2 speaker">
+        <div class="row speakerpic"><img class="img-circle img-responsive" src="{% static 'contentsummary/images/Andrew Rear.png' %}"> </div>
+        <div class="row speakername">Andrew Rear <br />Chief Executive, Digital Partners @ Munich RE</div>
+      </div>
+    </div>
+
+    <br/>
+    <div class="row content">
+      <div class="col-md-5 keytakeaways">
+        <div class="row takeawaystitle">KEY TAKEAWAYS </div>
+        <div class="row keytakeaway">
+          <div class="col takeawaynum vertical-align-center">1</div><div class="col-md-10 takeawaytext vertical-align-center">Much of the value being created by InsurTechs is on the back-office parts of the value-chain</div>
+        </div>
+        <hr class=midrow>
+        <div class="row keytakeaway">
+          <div class="col takeawaynum vertical-align-center">2</div><div class="col-md-10 takeawaytext vertical-align-center">There is heavy skepticism of the viability of P2P insurance and blochain technology</div>
+        </div>
+        <hr class="midrow">
+        <div class="row keytakeaway">
+          <div class="col takeawaynum vertical-align-center">3</div><div class="col-md-10 takeawaytext vertical-align-center">To be truly impactful, InsurTechs solutions need to be adopted across the value chain and married to the appropriate products</div>
+        </div>
+      </div>
+
+      <div class="col-md-5 quotes">
+        <div class="row quote">
+          <div class="col-xs-2 leftquote"><img class="quotepic" src="{% static 'contentsummary/images/leftquote.png' %}"></div>
+          <div class="col-md-8 quotetext"> I hear very little with regards to blockchain that makes sense with regards to this audience </div>
+          <div class="col-xs-2 rightquote"><img class="quotepic" src="{% static 'contentsummary/images/rightquote.png' %}"></div>
+        </div>
+        <div class="row quotespeaker">–MATTHEW CHURCHILL</div>
+        <div class="row quote">
+          <div class="col-xs-2 leftquote"><img class="quotepic" src="{% static 'contentsummary/images/leftquote.png' %}"></div>
+          <div class="col-md-8 quotetext"> P2P insurance is a misunderstanding of both P2P and insurance </div>
+          <div class="col-xs-2 rightquote"><img class="quotepic" src="{% static 'contentsummary/images/rightquote.png' %}"></div>
+        </div>
+        <div class="row quotespeaker">–ANDREW REAR</div>
+        <div class="row quote">
+          <div class="col-xs-2 leftquote"><img class="quotepic" src="{% static 'contentsummary/images/leftquote.png' %}"></div>
+          <div class="col-md-8 quotetext"> I think the structure of the market will change entirely. The pool of capital at the end remains but the combination of technology and distribution will be completely different in front of it. </div>
+          <div class="col-xs-2 rightquote"><img class="quotepic" src="{% static 'contentsummary/images/rightquote.png' %}"></div>
+        </div>
+        <div class="row quotespeaker">–MATTHEW CHURCHILL</div>
+      </div>
+    </div>
+  </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

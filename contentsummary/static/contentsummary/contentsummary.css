@@ -1,0 +1,145 @@
+*{
+	font-family: Slate;
+}
+
+.pillar {
+	text-align: right;
+}
+
+body {
+    margin-top: 20px;
+}
+
+.speakername{
+	text-align: center;
+	font-style: italic;
+	font-size: 125%;
+	margin-top: 5px;
+}
+
+.highsummary{
+	margin-bottom: 20px;
+	color: black;
+}
+
+.speaker{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+@font-face {
+	font-family: Slate;
+	src: url('./fonts/SlateProLight_1.otf');
+}
+
+.sessiontitle {
+	color:  rgb(96,96,96);
+	font-size: 500%;
+}
+
+.proofpillar {
+	color: rgb(226,152,21);
+	font-size:  200%;
+}
+
+.speakers {
+	margin-bottom: 20px;
+}
+
+.takeawaynum {
+	text-align: right;
+	color: rgb(96,96,96);
+	font-size: 250%;
+	margin-left: auto;
+}
+
+.takeawaystitle {
+	font-size: 200%;
+	margin-top: 5px;
+	margin-left: 5px;
+	color: rgb(0,138,179);
+}
+
+.speakerpic .img-responsive {
+    margin: 0 auto;
+}
+
+.keytakeaways {
+	background-color: rgb(235,248,251);
+	display: flex;
+	flex-direction: column;
+    align-items: flex-start; /* or center */
+    align-self: stretch;     /* make sure that the column is stretched */
+    justify-content: space-around;
+    margin-right: 10px;
+}
+
+.keytakeaway {
+	font-size: 200%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	color: rgb(0,138,179);
+}
+
+.vertical-align-center {
+    display: flex;
+    align-items: center;
+}
+
+.midrow {
+	border: 0;
+	clear:both;
+	display:block;
+	width: 96%;               
+	background-color:rgb(191,191,191);
+	height: 1px;
+}
+
+.quotetext {
+	font-size: 200%;
+	color: rgb(0,138,179);
+}
+
+.quote {
+	display: flex;
+	flex-direction: row;
+}
+
+.rightquote {
+	align-items: flex-end
+}
+
+.quotepic {
+	display: block;
+	max-width:100%;
+	max-height:100%;
+	width: auto;
+	height: auto;
+}
+
+.quotespeaker {
+	color:rgb(191,191,191);
+	text-align: right;
+	font-size: 200%;
+	margin-bottom: 20px;
+}
+
+.leftquote {
+	margin-left: 30px;
+}
+
+.content {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+@media (max-width: 992px) {
+
+  .quotes {
+      margin-top: 30px;
+  }
+
+}
