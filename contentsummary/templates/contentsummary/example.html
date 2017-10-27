@@ -1,3 +1,6 @@
+{% load static %}
+<script src="{% static 'contentsummary/scripts/jquery-3.2.1.min.js' %}"></script>
+
 {# Load the tag library #}
 {% load bootstrap3 %}
 
@@ -8,10 +11,6 @@
 {# Display django.contrib.messages as Bootstrap alerts #}
 {% bootstrap_messages %}
 
-{% load static %}
-
-<script src="{% static 'contentsummary/scripts/jquery-3.2.1.min.js' %}"></script>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,8 +20,6 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>ITC Summary Example</title>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'contentsummary/contentsummary.css' %}" />
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -71,11 +68,11 @@
         </div>
         <hr class=midrow>
         <div class="row keytakeaway">
-          <div class="col takeawaynum vertical-align-center">2</div><div class="col-md-10 takeawaytext vertical-align-center">There is heavy skepticism of the viability of P2P insurance and blochain technology</div>
+          <div class="col takeawaynum vertical-align-center">2</div><div class="col-md-10 takeawaytext vertical-align-center">There is heavy skepticism of the viability of P2P insurance and blockchain technology</div>
         </div>
         <hr class="midrow">
         <div class="row keytakeaway">
-          <div class="col takeawaynum vertical-align-center">3</div><div class="col-md-10 takeawaytext vertical-align-center">To be truly impactful, InsurTechs solutions need to be adopted across the value chain and married to the appropriate products</div>
+          <div class="col takeawaynum vertical-align-center">3</div><div class="col-md-10 takeawaytext vertical-align-center">To be truly impactful, InsurTech's solutions need to be adopted across the value chain and married to the appropriate products</div>
         </div>
       </div>
 
@@ -101,10 +98,5 @@
       </div>
     </div>
   </div>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
