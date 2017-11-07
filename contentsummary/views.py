@@ -24,6 +24,24 @@ def singleSession(request,session_number):
 	}
 
 	return render(request,'contentsummary/example_auto_no_resize.html',context)
+
+def allSessions(request):
+	db_sessions = Session.objects.all()
+
+	sessions = [
+	{
+	'session':session,
+	'quotes':Quote.objects.filter(session=session),
+	'keytakeaways':KeyTakeaway.objects.filter(session=session),
+	'speakers':Speech.objects.filter(session=session),
+	} for session in db_sessions
+	]
+
+	context = {'sessions':sessions}
+
+	return render(request,'contentsummary/all_sessions_no_resize.html',context)
+
+
 	
 
 
