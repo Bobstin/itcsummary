@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap3',
     'contentsummary',
+    'bulk_admin',
 ]
 
 MIDDLEWARE = [
