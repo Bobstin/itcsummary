@@ -23,7 +23,7 @@ def singleSession(request,session_number):
 	'speakers':Speech.objects.filter(session=session),
 	}
 
-	return render(request,'contentsummary/example_auto.html',context)
+	return render(request,'contentsummary/example_auto_no_resize.html',context)
 	
 
 
