@@ -25,7 +25,7 @@ def singleSession(request,session_number):
 
 	context = {'sessions':sessions}
 
-	return render(request,'contentsummary/all_sessions_no_resize.html',context)
+	return render(request,'contentsummary/all_sessions.html',context)
 
 def allSessions(request):
 	db_sessions = Session.objects.all()
