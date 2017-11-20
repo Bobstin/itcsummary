@@ -29,11 +29,11 @@
     <div class="container">
     <div class="row">
         <div class="col-xs-10 sessiontitle">{{session.session.name}}</div>
-        <div class="col-xs-1 pillar proofpillar">{{session.session.pillar.name}}</div>
+        <div class="col-xs-2 pillar proofpillar"><img class="img-responsive" src="{% static 'contentsummary/images'%}/{{session.session.pillar.name}}.png">{{session.session.pillar.name}}</div>
     </div>
     <div class="row highsummary">
       <h2>
-      {{session.session.summary}}
+      {{session.session.summary}}.
     </h2>
     </div>
     <div class="row speakers">
@@ -41,7 +41,7 @@
       {{speaker.name}}
       <div class="col-xs-2 speaker">
         <div class="row speakerpic"><img class="img-circle img-responsive" src="{% static 'contentsummary/images'%}/{{speaker.speaker.name}}.jpg"> </div>
-        <div class="row speakername">{{speaker.speaker.name}} <br />{{speaker.speaker.title}} @ {{speaker.speaker.company.name}}</div>
+        <div class="row speakername"><span class="speakername-name">{{speaker.speaker.name}}</span> <br />{{speaker.speaker.title}} @ {{speaker.speaker.company.name}}</div>
       </div>
       {% endfor %}
     </div>
