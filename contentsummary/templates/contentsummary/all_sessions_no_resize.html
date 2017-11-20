@@ -36,12 +36,18 @@
       {{session.session.summary}}.
     </h2>
     </div>
-    <div class="row speakers">
+    <div class="row">
       {% for speaker in session.speakers %}
-      {{speaker.name}}
       <div class="col-xs-2 speaker">
         <div class="row speakerpic"><img class="img-circle img-responsive" src="{% static 'contentsummary/images'%}/{{speaker.speaker.name}}.jpg"> </div>
-        <div class="row speakername"><span class="speakername-name">{{speaker.speaker.name}}</span> <br />{{speaker.speaker.title}} @ {{speaker.speaker.company.name}}</div>
+        <div class="row speakername"><span class="speakername-name">{{speaker.speaker.name}}</span> </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="row speakers">
+      {% for speaker in session.speakers %}
+      <div class="col-xs-2 speaker">
+        <div class="row speakername">{{speaker.speaker.title}} @ {{speaker.speaker.company.name}} </div>
       </div>
       {% endfor %}
     </div>
