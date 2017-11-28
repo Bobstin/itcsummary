@@ -37,8 +37,9 @@ body {
 }
 
 @font-face {
-	font-family: Slate;
-	src: url('./fonts/SlateProLight_1.otf');
+	font-family: 'Slate';
+	src: url('./fonts/SlateProLight_1.otf'),
+		 url('./fonts/SlatePro-Light.eot');
 }
 
 .sessiontitle {
