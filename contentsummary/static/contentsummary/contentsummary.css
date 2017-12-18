@@ -52,6 +52,7 @@ body {
 	color:  rgb(96,96,96);
 	font-size: 500%;
 	line-height: 90%;
+	min-height: 20%;
 }
 
 .proofpillar {
