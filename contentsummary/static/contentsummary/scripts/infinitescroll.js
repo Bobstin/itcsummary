@@ -1,6 +1,9 @@
 // init controller
   var controller = new ScrollMagic.Controller({loglevel: 1});
 
+// start with the first session
+  var current_session = 1; 
+
   // build scene
   var scene = new ScrollMagic.Scene({triggerElement: "#loader", triggerHook: "onEnter", offset:-500})
           .addTo(controller)
@@ -14,9 +17,11 @@
 
   function loadNextSession () {
     $("#loader").removeClass("active");
-    $.get( "/test/next", function( data ) {
+    $.get( "/test/next/" + current_session, function( data ) {
       $( "#newcontent" ).append( data );
     });
+
+    current_session += 1
 
     var slides = document.querySelectorAll("section.panel")
 
