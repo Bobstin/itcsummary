@@ -14,7 +14,7 @@ class Conference(models.Model):
 	name = models.CharField(max_length=200)
 	start = models.DateField()
 	end = models.DateField()
-	conference_type = models.ForeignKey(ConferenceType)
+	conference_type = models.ForeignKey(ConferenceType, on_delete=models.CASCADE)
 
 	def __str__(self):
 		return self.name
@@ -24,7 +24,7 @@ class Conference(models.Model):
 
 class Pillar(models.Model):
 	name = models.CharField(max_length=200)
-	conference = models.ForeignKey(Conference)
+	conference = models.ForeignKey(Conference, on_delete=models.CASCADE)
 
 	def __str__(self):
 		return self.name
@@ -34,7 +34,7 @@ class Pillar(models.Model):
 
 class Session(models.Model):
 	name = models.TextField()
-	conference = models.ForeignKey(Conference)
+	conference = models.ForeignKey(Conference, on_delete=models.CASCADE)
 	pillar = models.ForeignKey(Pillar, on_delete=models.SET_NULL, blank=True, null=True)
 	summary = models.TextField()
 	number = models.IntegerField()
@@ -57,7 +57,7 @@ class Company(models.Model):
 class Speaker(models.Model):
 	name = models.CharField(max_length=100)
 	title = models.CharField(max_length=100)
-	company = models.ForeignKey(Company)
+	company = models.ForeignKey(Company, on_delete=models.CASCADE)
 	details = models.TextField(blank=True, null=True)
 
 	def __str__(self):
@@ -67,18 +67,18 @@ class Speaker(models.Model):
 		ordering = ['name']
 
 class Speech(models.Model):
-	session = models.ForeignKey(Session)
-	speaker = models.ForeignKey(Speaker)
+	session = models.ForeignKey(Session, on_delete=models.CASCADE)
+	speaker = models.ForeignKey(Speaker, on_delete=models.CASCADE)
 
 	class Meta:
 		ordering = ['speaker']
 
 
 class KeyTakeaway(models.Model):
-	session = models.ForeignKey(Session)
+	session = models.ForeignKey(Session, on_delete=models.CASCADE)
 	takeaway = models.TextField()
 
 class Quote(models.Model):
-	session = models.ForeignKey(Session)
-	speaker = models.ForeignKey(Speaker)
+	session = models.ForeignKey(Session, on_delete=models.CASCADE)
+	speaker = models.ForeignKey(Speaker, on_delete=models.CASCADE)
 	quote = models.TextField() 
