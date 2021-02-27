@@ -4,8 +4,6 @@ from django.forms.models import BaseInlineFormSet, ModelForm
 # Register your models here.
 from .models import ConferenceType, Conference, Pillar, Session, Speaker, Company, KeyTakeaway, Quote, Speech
 
-import bulk_admin
-
 class PillarInline(admin.TabularInline):
 	model = Pillar
 	fields = ('name',)
@@ -42,10 +40,10 @@ class ConferenceAdmin(admin.ModelAdmin):
 	]
 	inlines = [PillarInline,SessionInline]
 
-class SpeakerAdmin(bulk_admin.BulkModelAdmin):
+class SpeakerAdmin(admin.ModelAdmin):
 	fields = ['name','company','title']
 
-class CompanyAdmin(bulk_admin.BulkModelAdmin):
+class CompanyAdmin(admin.ModelAdmin):
 	fields = ['name']
 	inlines = [SpeakerInline]
 
